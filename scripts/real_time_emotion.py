@@ -56,7 +56,7 @@ def main():
     
     # Load the model
     model = EmotionNet().to(device)
-    model.load_state_dict(torch.load('emotion_model.pth', map_location=device))
+    model.load_state_dict(torch.load('../training/best_model.pth', map_location=device))
     model.eval()
     
     # Initialize face detection
